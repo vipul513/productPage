@@ -69,8 +69,8 @@ function addItem(elm) {
 function getAddOnPrices(elm) {
     let eId= elm.id;
     let ePrice = parseFloat(document.getElementById('salePrice'+eId).innerHTML.replace('$',''));
-    let savePrice = parseFloat(document.getElementById('salePrice'+eId).previousElementSibling.innerHTML.replace('$',''));
-    TotalAddOnPrice = TotalAddOnPrice + ePrice;
+    TotalAddOnPrice = parseFloat(TotalAddOnPrice) + parseFloat(ePrice);
+    TotalAddOnPrice = TotalAddOnPrice.toFixed(2);
     SelectedAddOns.innerHTML = `${Counter-1} add-ons selected`;
     setAddOnPrice.innerHTML = `+ $${TotalAddOnPrice}`;
     calculatePrice();
@@ -95,6 +95,7 @@ function calculatePrice() {
     if(!isNaN(aPrice)) {
         tprice = tprice + aPrice;
     }
+    tprice = tprice.toFixed(2);
     totalPrice.innerHTML = `$${tprice}`;
 }
 

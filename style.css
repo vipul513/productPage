@@ -31,7 +31,7 @@ body {
 }
 
 #popup {
-    height: 600px;
+    height: 650px;
     width: 500px;
     object-fit: cover;
     position: fixed;
@@ -58,10 +58,6 @@ body {
     height: 50px;
     border-radius: 3px;
     margin-right: 8px;
-}
-
-.active-image {
-    border: 1px solid yellow;
 }
 
 /* Purchase */
