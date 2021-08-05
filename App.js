@@ -30,6 +30,9 @@ function highlightImage(obj) {
     }
     obj.classList.remove('rmMarkup');
     obj.classList.add('Markup');
+    if(QuantityCounter.getAttribute('textColor')) {
+        QuantityCounter.style.color = 'black';
+    }
 }
 
 function popupImage(element) {
