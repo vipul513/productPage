@@ -70,7 +70,6 @@ function getAddOnPrices(elm) {
     let eId= elm.id;
     let ePrice = parseFloat(document.getElementById('salePrice'+eId).innerHTML.replace('$',''));
     let savePrice = parseFloat(document.getElementById('salePrice'+eId).previousElementSibling.innerHTML.replace('$',''));
-    debugger;
     TotalAddOnPrice = TotalAddOnPrice + ePrice;
     SelectedAddOns.innerHTML = `${Counter-1} add-ons selected`;
     setAddOnPrice.innerHTML = `+ $${TotalAddOnPrice}`;
