@@ -56,7 +56,6 @@ body {
 .image-slider img {
     width: 80px;
     height: 50px;
-    border: 1px solid #dfe0e0;
     border-radius: 3px;
     margin-right: 8px;
 }
@@ -164,7 +163,7 @@ h3,h4,h5 {
 
 .item-image {
     height: 100px;
-    width: 100px;
+    width: 80%;
 }
 
 .item-buy {
@@ -172,11 +171,16 @@ h3,h4,h5 {
     margin-bottom: 25px;
 }
 
+input[type="checbox"]:hover {
+    width: 50px;
+}
+
+
 .item-photo {
-    width: 30%;
+    width: 40%;
 }
 .item-description {
-    width: 60%;
+    width: 50%;
 }
 
 .price {
@@ -242,3 +246,11 @@ h3,h4,h5 {
     background-color: #e9920f;
 }
 
+.Markup {
+    border: 2px solid #e9920f;
+    color: #e9920f;
+}
+
+.rmMarkup {
+    border: 2px solid #dfe0e0;
+}

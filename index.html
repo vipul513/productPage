@@ -52,13 +52,13 @@
                     </div>
                 </div>
                 <div class='quantity' id='quantity'>
-                    <span class='sub' onclick='highlightImage(document.getElementById("quanity-val"))'>
+                    <span class='sub' id='sub' onclick='IncreaseCount(this);highlightImage(document.getElementById("quanity-val"))'>
                        <b> - </b>
                     </span>
                     <div class='count' id='quanity-val'>
                         <b> 1 </b>
                     </div>
-                    <div class='add' onclick='highlightImage(document.getElementById("quanity-val"))'>
+                    <div class='add' id='add' onclick='IncreaseCount(this);highlightImage(document.getElementById("quanity-val"))'>
                         <b> + </b>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
 
                     <div class='inner-item'>
                         <div class='item-buy'>
-                            <input type="checkbox" id= '3' onclick="addItem(this)" style="height: 25px;width: 25px;">
+                            <input type="checkbox" class='checkbox' id= '3' onclick="addItem(this)" style="height: 25px;width: 25px;">
                         </div>
                         <div class='item-photo'>
                             <img class="item-image" src="./images/MemoryCard.jpg" alt="">
@@ -167,7 +167,7 @@
     </div>
 
     <div id='popup'>
-        <img src="" alt="Image Detail" style='height: 400px;width: 450px;'>
+        <img src="" alt="Image Detail" style='height: 450px;width: 480px;'>
     </div>
     <script src = './App.js' ></script>
 </body>

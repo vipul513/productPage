@@ -25,9 +25,11 @@ function changeImage(obj) {
 function highlightImage(obj) {
     let slider = document.getElementById(obj.parentElement.id);
     for (let index = 0; index < slider.children.length; index++) {
-       slider.children[index].style.borderColor = 'grey';
+        slider.children[index].classList.remove('Markup');
+        slider.children[index].classList.add('rmMarkup');
     }
-    obj.style.borderColor = '#fba304';
+    obj.classList.remove('rmMarkup');
+    obj.classList.add('Markup');
 }
 
 function popupImage(element) {
@@ -67,6 +69,8 @@ function addItem(elm) {
 function getAddOnPrices(elm) {
     let eId= elm.id;
     let ePrice = parseFloat(document.getElementById('salePrice'+eId).innerHTML.replace('$',''));
+    let savePrice = parseFloat(document.getElementById('salePrice'+eId).previousElementSibling.innerHTML.replace('$',''));
+    debugger;
     TotalAddOnPrice = TotalAddOnPrice + ePrice;
     SelectedAddOns.innerHTML = `${Counter-1} add-ons selected`;
     setAddOnPrice.innerHTML = `+ $${TotalAddOnPrice}`;
@@ -93,4 +97,15 @@ function calculatePrice() {
         tprice = tprice + aPrice;
     }
     totalPrice.innerHTML = `$${tprice}`;
+}
+
+function IncreaseCount(obj) {
+    let curValue = parseInt(QuantityCounter.children[0].innerHTML);
+    if(obj.id == 'sub' && curValue > 1) {
+        curValue--;
+    } else if (obj.id == 'add') {
+        curValue++;
+    }
+    QuantityCounter.children[0].innerHTML = curValue;
+    calculatePrice();
 }
