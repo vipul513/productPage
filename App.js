@@ -88,7 +88,6 @@ function calculatePrice() {
     if(!isNaN(pPrice)) {
         tprice = pPrice + aPrice;
     }
-    debugger;
     aPrice = parseFloat(setAddOnPrice.innerHTML.replace('$','').replace('+',''));
     if(!isNaN(aPrice)) {
         tprice = tprice + aPrice;

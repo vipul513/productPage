@@ -79,13 +79,14 @@ body {
 
 h3,h4,h5 {
     margin-bottom: 5px;
+    letter-spacing: 1px;
 }
 .inner-item h4 {
     color: #696969;
 }
 
 .stars {
-    color: #5a989d;
+    color: #549ea3;
     margin-bottom: 5px;
 }
 
