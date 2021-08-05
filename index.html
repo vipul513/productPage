@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+    <title>Document</title>
+</head>
+<body onload="defaultSettings()">
+    <input type="hidden" id="Cvalue" value=1>
+    <div class = "container">
+        <!-- Show Images -->
+        <div class="image-gallery">
+            <div class='image-container'>
+                <img id='main-image' src="./images/cctv.jpg" onmouseenter="popupImage(this)" onmouseleave="hidePopup(this)" alt="Camera">
+            </div>
+            <div class='image-slider' id ="image-slider">
+                <img class="oImages" src="./images/cctv.jpg" onclick='changeImage(this)'  alt="">
+                <img class="oImages" src="./images/cctv-camera.jpg" onclick='changeImage(this)' alt="">
+                <img class="oImages" src="./images/cctv3.jpg" onclick='changeImage(this)' alt="">
+                <img class="oImages" src="./images/cctv2.jpg" onclick='changeImage(this)' alt="">
+            </div>
+        </div>
+        <!--Purchase Part-->
+        <div class= "purchase">
+            <div class="inner-purchase">
+                <h4>MPX HD 1080p Outdoor PTZ Camera, 4x Optical Zoom with Color Night Vision, Metal Camera</h4>
+                <span class='stars'>
+                    <i class="uis uis-star star"></i>
+                    <i class="uis uis-star star"></i>
+                    <i class="uis uis-star star"></i>
+                    <i class="uis uis-star star"></i>
+                    <i class="uis uis-star star"></i>
+                    <span>(12 Review)</span>
+                </span>
+                <div class='price'>
+                    <h5 class='final'> <del>Reg. $299.99</del></h5>
+                    <b class='sale'>$199.99 <span class='save'> &nbsp;SAVE $70.00 (35%) </span></b>
+                </div>
+                <h3>Select Options</h3>
+                <div class = 'options' id = 'options'>
+                    <div class='inner-options' onclick = 'getPrice(this);highlightImage(this)'>
+                        Single <p class='inner-text'>$199.99</p>
+                    </div>
+                    <div class='inner-options' onclick = 'getPrice(this);highlightImage(this)'>
+                        2-Pack <p class='inner-text'>$369.99</p>
+                    </div>
+                    <div class='inner-options' onclick = 'getPrice(this);highlightImage(this)'>
+                        4-Pack <p class='inner-text'>$699.99</p>
+                    </div>
+                </div>
+                <div class='quantity' id='quantity'>
+                    <span class='sub' onclick='highlightImage(document.getElementById("quanity-val"))'>
+                       <b> - </b>
+                    </span>
+                    <div class='count' id='quanity-val'>
+                        <b> 1 </b>
+                    </div>
+                    <div class='add' onclick='highlightImage(document.getElementById("quanity-val"))'>
+                        <b> + </b>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Ons -->
+            <div class="addOn">
+                <h2>Add-ons Products</h2>
+                <div class = 'wrapper'>
+                    <!-- Add On Item-->
+                    <div class='inner-item'>
+                        <div class='item-buy'>
+                            <input type="checkbox" id='1' onclick="addItem(this)" style="height: 25px;width: 25px;background-color: green;">
+                        </div>
+                        <div class='item-photo'>
+                            <img class="item-image" src="./images/DVR.jpg" alt="">
+                        </div>
+                        <div class='item-description'>
+                            <h4>DEAL OF THE DAY! 4K Ultra HD 8 Channel Security DVR With... </h4>
+                            <span class='stars'>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <span>&nbsp;&nbsp;(12 Review)</span>
+                            </span>
+                            <div class='price'>
+                                <h5 class='final'> <del>Reg. $199.99</del></h5>
+                                <b class='sale' id='salePrice1'>$129.99</b> <span class='save'> SAVE $70.00 (35%) </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='inner-item'>
+                        <div class='item-buy'>
+                            <input type="checkbox" id='2' onclick="addItem(this)" style="height: 25px;width: 25px;background-color: green;">
+                        </div>
+                        <div class='item-photo'>
+                            <img class="item-image" src="./images/rg59.jpg" alt="">
+                        </div>
+                        <div class='item-description'>
+                            <h4>100ft (30m) Premium 4K RG59/Power Accessory Cable </h4>
+                            <span class='stars'>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <span> &nbsp;&nbsp;(12 Review)</span>
+                            </span>
+                            <div class='price onlyP'>
+                                <b class='sale' id='salePrice2'>$49.99 </b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='inner-item'>
+                        <div class='item-buy'>
+                            <input type="checkbox" id= '3' onclick="addItem(this)" style="height: 25px;width: 25px;">
+                        </div>
+                        <div class='item-photo'>
+                            <img class="item-image" src="./images/MemoryCard.jpg" alt="">
+                        </div>
+                        <div class='item-description'>
+                            <h4>256GB Survelliance-grade microSD card</h4>
+                            <span class='stars'>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <i class="uis uis-star star"></i>
+                                <span>&nbsp;&nbsp;(12 Review)</span>
+                            </span>
+                            <div class='price onlyP'>
+                                <b class='sale' id='salePrice3'>$64.99 </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart items-->
+        <div class="cart">
+            <div class='heading'>
+                <h3>Price Summary</h3>
+            </div>
+            <div class='product-desc' id='product-desc'>
+                <b>Main Product</b> <span class='product-price align-price' id='product-price'>$385.00</span>
+                <div class='product-addOns'>
+                   <b id='add-desc'> 0 add-ons selected </b> <span class='product-price-addons align-price' id='product-price-addons'> + $0 </span>
+                </div>
+            </div>
+            <div class='total'>
+                <b> Total Price </b> <span class='total-price align-price sale' id='total-price'> $441.95 </span>
+                <div class='total-save'>
+                    <span class='save-price align-price save' id='save-price'> save $70.00 (35%) </span>
+                </div>
+            </div>
+            <div class='Cart-button'>
+                <button id='btn' class='btn'> Add 1 Items To Cart </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id='popup'>
+        <img src="" alt="Image Detail" style='height: 400px;width: 450px;'>
+    </div>
+    <script src = './App.js' ></script>
+</body>
+</html>
